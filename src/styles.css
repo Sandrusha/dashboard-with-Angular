@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --headerBgColor: #631dff;
+    --headerTxtMainColor: #fff;
+    --mainTxtColor: #646698;
+    --secondTxtColor: #6483fc;
+    --bordersColor: #f1f5f8;
+    --greyColor: #b5b5b5;
+    --bgColor: #f9fbfc;
+    --footerBgColor: #333;
+    --paginationTxt: #afb1c9;
+    --paginationBgTxt: #e0f3ff;
+    --success: #4dde76;
+    --successBorderColor: #5cd581;
+    
+    --fontFamily: 'Lato', sans-serif; 
+    --light: 300;
+    --bold: 700;
+}
+
+body {
+    font-family: var(--fontFamily);
+    margin: 0;
+    font-size: 16px;
+    cursor: default;
+}
+
+@media only screen and (max-width: 1400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+.container {
+    max-width: 96%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/*SCROLLBAR - hide it, but still being able to scroll*/
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/*END OF SCROLLBAR*/

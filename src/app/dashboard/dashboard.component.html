@@ -1,0 +1,18 @@
+<div id="heroSection">
+    <div class="container" id="dashboardFlex">
+        <div id="leftSection">
+            <div>Title</div>
+            <div>You have <span>2 pending</span> ads to be approved</div>
+        </div>
+        <div id="rightSection">
+            <div id="filterBtn"><img src="./assets/images/add.png" /> Filter</div>
+            <div id="daysBtn"><img src="./assets/images/calendar.png" /> Last 30 days</div>
+            <div id="search" class="md-form">  
+                <img src="./assets/images/blue-search.png" /><input type="search" [(ngModel)]="searchText" placeholder="Search">
+            </div>
+            <div id="createBtn" (click) = "onClickAdd()"><img src="./assets/images/white-add.png" /> Create New</div>
+        </div>
+    </div>  
+</div>
+
+<app-table [rows] = "statistics"></app-table>

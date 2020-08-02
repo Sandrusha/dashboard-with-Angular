@@ -1,0 +1,6 @@
+<div id="subheader">
+    <div *ngFor="let submenutab of subTabList; let i = index" [ngClass] = "{'selectedTab': submenutab.name == currentSubTab.name}" (click)="onClickSubMenu(submenutab)">
+        <a *ngIf="i%2 == 0" routerLink="/dashboard" routerLinkActive="active">{{submenutab.name}}</a>
+        <a *ngIf="i%2 !== 0" routerLink="/dashboard-secondary" routerLinkActive="active">{{submenutab.name}}</a>
+    </div>
+</div>

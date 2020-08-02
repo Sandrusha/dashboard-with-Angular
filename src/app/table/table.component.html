@@ -1,0 +1,48 @@
+<div id="table">
+    <table>
+        <tr>
+            <th>Object Name <img src="/assets/images/down-arrow.png" /></th>
+            <th>Metric 01</th>
+            <th>Metric 02</th>
+            <th>Metric 03</th>
+            <th>Metric 04</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr *ngFor="let row of rows">
+            <td>{{row.name}}</td>
+            <td *ngFor="let value of row.values; let i = index">
+                <span *ngIf="i < row.values.length - 1">{{value.value | number}} <span class="customLabelText">{{value.label}}</span></span>
+                <span *ngIf="i == row.values.length - 1"><span class="customLabelText">{{value.label}}</span> {{value.value | number}}</span>
+            </td>
+            <td><img src="/assets/images/elipses.png" /></td>
+        </tr>
+    </table>
+</div>
+<nav aria-label="Table Pagination" class="container">
+    <ul class="pagination">
+        <li class="page-item">
+            <a href="#">First</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true" class="disabled">❮</span>
+            <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link activePage" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">❯</span>
+            <span class="sr-only">Next</span>
+            </a>
+        </li>
+        <li class="page-item">
+            <a href="#">Last</a>
+        </li>
+    </ul>
+    <span id="dropDown">5 <img src="/assets/images/dropdown-arrow.png" /></span>
+  </nav>

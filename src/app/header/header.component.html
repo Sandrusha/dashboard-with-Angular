@@ -1,0 +1,20 @@
+<div id="header">
+  <div class="container" id="headerFlex">
+    <div id="logo"><span>Audio</span>Serve</div>
+    <div id="mainTabs">
+      <div *ngFor="let maintab of maintabs" [ngClass] = "{'selected': maintab.name == currentMainTab.name}" (click)="onClickMainTab(maintab)">{{maintab.name}}</div>
+    </div>
+    <div id="search" class="md-form">  
+      <img src="../../assets/images/search.png" /><input type="search" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <div id="userProfile">
+      <img src="{{user.avatarImg}}" />
+      <div id="userInfo">
+        <span>{{user.name}}</span>
+        <span>{{user.role}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-subheader [subTabList] = "currentMainTab.subTabsList"></app-subheader>

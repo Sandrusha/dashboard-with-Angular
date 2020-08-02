@@ -1,0 +1,30 @@
+.selectedTab {
+    border-bottom: 2px solid #631dff;
+    padding-bottom: 26px;
+    margin-top: 29px;
+    opacity: 1!important;
+}
+
+#subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+    -webkit-box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5); 
+    box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5)
+}
+
+#subheader > div {
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+#subheader > div:last-child {
+    margin-right: 0;
+}
+
+#subheader > div > a {
+    text-decoration: none;
+    color: #646698;
+}

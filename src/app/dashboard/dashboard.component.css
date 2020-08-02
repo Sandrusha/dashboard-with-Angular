@@ -1,0 +1,88 @@
+#heroSection {
+    color: var(--mainTxtColor);
+    padding: 2em 0;
+    background-color: var(--bgColor);
+}
+
+#dashboardFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*****LEFT SECTION*****/
+#leftSection > div:first-child {
+    font-size: 1.2em;
+    font-weight: var(--bold);
+    padding-bottom: .2em;
+}
+
+#leftSection > div:nth-child(2) {
+    font-size: .8em;
+}
+
+#leftSection > div:nth-child(2) > span {
+    color: var(--secondTxtColor);
+    text-decoration: underline;
+    font-weight: var(--bold);
+    cursor: pointer;
+}
+
+/*****RIGHT SECTION*****/
+#rightSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rightSection div {
+    margin-left: .5em;
+}
+
+#rightSection div:first-child {
+    margin-left: 0;
+}
+
+#rightSection div img {
+    width: 12px;
+    height: 12px;
+    margin-right:.5em;
+}
+
+#filterBtn, #daysBtn {
+    border: 1px solid var(--bordersColor);
+    border-radius: 5px;
+    padding: 1em;
+}
+
+#filterBtn, #daysBtn, #createBtn {
+    cursor: pointer;
+}
+
+#filterBtn, #daysBtn, input {
+    font-size: .8em;
+}
+
+#filterBtn, #daysBtn, #search {
+    background-color: #fff;
+}
+
+#search {
+    border: 1px solid var(--bordersColor);
+    border-radius: 5px;
+    padding: .6em;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#createBtn {
+    background-color: var(--success);
+    border: 1px solid var(--successBorderColor);
+    border-radius: 5px;
+    color: #fff;
+    padding: .6em;
+}
