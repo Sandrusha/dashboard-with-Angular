@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Insert new row</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Object Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Metric 01</mat-label>
+    <input matInput [(ngModel)]="data.values[0].value">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Metric 02</mat-label>
+    <input matInput [(ngModel)]="data.values[1].value">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Metric 03</mat-label>
+    <input matInput [(ngModel)]="data.values[2].value">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Metric 04</mat-label>
+    <input matInput [(ngModel)]="data.values[3].value">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data">Ok</button>
+</div>

@@ -12,6 +12,13 @@ import { TableComponent } from './table/table.component';
 import { DatePipe } from '@angular/common';
 import { DashboardSecondaryComponent } from './dashboard-secondary/dashboard-secondary.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { StatDialog } from './stat-dialog/stat-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -22,16 +29,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     FilterPipe,
     TableComponent,
-    DashboardSecondaryComponent
+    DashboardSecondaryComponent,
+    StatDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
-  providers: [DatePipe],
-  bootstrap: [AppComponent]
+  providers: [DatePipe, {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  bootstrap: [AppComponent],
+  entryComponents: [StatDialog]
 })
 
 export class AppModule { }
