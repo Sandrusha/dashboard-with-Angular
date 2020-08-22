@@ -7,7 +7,7 @@ import { RandText } from '../interfaces/randText';
 @Component({
   selector: 'app-dashboard-secondary',
   templateUrl: './dashboard-secondary.component.html',
-  styleUrls: ['./dashboard-secondary.component.css']
+  styleUrls: ['./dashboard-secondary.component.scss']
 })
 export class DashboardSecondaryComponent implements OnInit {
   statistics: Statistics[] = [];

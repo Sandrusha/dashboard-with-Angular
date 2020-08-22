@@ -2,6 +2,7 @@
     background-color: var(--bgColor);
     padding: 0 3em;
 }
+
 table {
     width: 100%;
     text-align: left;
@@ -10,50 +11,38 @@ table {
     border-collapse: separate;
     border-spacing: .7em;
     color: var(--mainTxtColor);
-}
-
-table tr {
-    height: 80px;
-    -webkit-box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5); 
-    box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5)
-}
-
-table tr:first-child {
-    box-shadow: none;
-}
-
-table tr:first-child th:first-child img {
-    cursor: pointer;
-}
-
-table tr th:first-child {
-    padding-left: 1em;
-}
-
-table tr td:first-child {
-    font-weight: var(--bold);
-}
-
-table tr th {
-    padding-left: 3em;
-}
-
-table tr td {
-    padding-left: 3em;
-}
-
-table tr th > img {
-    width: 10px;
-    height: 12px;
-}
-
-table tr th:first-child {
-    color: var(--secondTxtColor);
-}
-
-table tr td > img {
-    height: 18px;
-    cursor: pointer;
+    tr {
+        height: 80px;
+        -webkit-box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5); 
+        box-shadow: 0px 3px 13px -3px rgba(122,122,122,0.5);
+        th {
+            padding-left: 3em;
+            img {
+                width: 10px;
+                height: 12px;
+            }
+        }
+        th:first-child {
+            padding-left: 1em;
+            color: var(--secondTxtColor);
+        }
+        td {
+            padding-left: 3em;
+            img {
+                height: 18px;
+                cursor: pointer;
+            }
+        }
+        td:first-child {
+            font-weight: var(--bold);
+        }   
+    }
+    tr:first-child {
+        box-shadow: none;
+        th:first-child img {
+            cursor: pointer;
+        }
+    }
 }
 
 .customLabelText {
@@ -68,12 +57,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2em;
-}
-
-nav > span > img {
-    width: 12px;
-    margin-left: .5em;
-    cursor: pointer;
+    span {
+        img {
+            width: 12px;
+            margin-left: .5em;
+            cursor: pointer;
+        }
+    }
 }
 
 .pagination {
