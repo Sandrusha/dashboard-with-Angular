@@ -8,7 +8,7 @@
             <th>Metric 04</th>
             <th>&nbsp;</th>
         </tr>
-        <tr *ngFor="let row of rows">
+        <tr *ngFor="let row of rows | filter: searchText">
             <td>{{row.name}}</td>
             <td *ngFor="let value of row.values; let i = index">
                 <span *ngIf="i < row.values.length - 1">{{value.value | number}} <span class="customLabelText">{{value.label}}</span></span>

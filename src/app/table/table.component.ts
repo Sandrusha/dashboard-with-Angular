@@ -10,6 +10,8 @@ import { Statistics } from '../interfaces/statistics';
 export class TableComponent implements OnInit {
   @Input()
   rows: Statistics[];
+  @Input()
+  searchText: string;
   constructor() { }
 
   ngOnInit(): void {

@@ -41,12 +41,4 @@ export class DashboardComponent implements OnInit {
   onClickAdd(): void {
     this.openDialog();
   }
-
-  onChangeSearch(): void {
-    if (this.searchText == "") {
-      this.statistics = this.statisticsService.getStatistics();
-    } else {
-     this.statistics = this.allStatistics.filter((elem) => {return elem.name.indexOf(this.searchText) != -1});
-    }
-  }
 }
